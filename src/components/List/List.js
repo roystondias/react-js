@@ -74,7 +74,7 @@ function List() {
                         }
                     })}
                 </div>
-            {/* <JobsListing department={selectedDepartment} location={selectedLocation} function={selectedFunction}></JobsListing> */}
+            <JobsListing department={selectedDepartment || 0} location={selectedLocation || 0} function={selectedFunction||0}></JobsListing>
         </div>
     )
 }
