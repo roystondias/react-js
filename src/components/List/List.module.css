@@ -1,0 +1,28 @@
+.container {
+    background-color: rgb(207, 204, 204);
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+input{
+    width: 100%;
+    border: none;
+    height: 25px;
+}
+.container__filter{
+    background-color: rgb(207, 204, 204);
+    width: 95%;
+    position: relative;
+    top: 20px;
+    margin: auto;
+    padding: 20px;
+}
+label{
+    margin: 20px;
+}
+select{
+    border: none;
+    height: 25px;
+}
