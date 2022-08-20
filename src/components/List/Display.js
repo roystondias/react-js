@@ -1,18 +1,26 @@
+//importing all hook from react
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import styles from './Display.module.css'
+
+//importing Material UI icon
 import AddLocationIcon from '@mui/icons-material/AddLocation';
 
 function Display() {
+    //using the UseState hook
     const [jobDetails, setjobDetails] = useState([])
     const [deptOpening, setdeptOpening] = useState([])
     const connection = useLocation();
     const jobId = connection.state.jobId;
     const dept = connection.state.department.id;
+
+    //End points to hit to get the data
     const URL = `https://demo.jobsoid.com/api/v1/jobs/${jobId}`;
     const DEPT_URL = `https://demo.jobsoid.com/api/v1/jobs?dept=${dept}`;
+
+    //using the useEffect hook for fetching the data
     useEffect(() => {
         fetch(URL).then((data) => data.json()).then((response) => setjobDetails(response));
         fetch(DEPT_URL).then((data) => data.json()).then((response) => setdeptOpening(response));

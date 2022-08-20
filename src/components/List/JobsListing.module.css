@@ -1,17 +1,17 @@
-.container{
+.container {
     width: 70%;
     margin: auto;
     margin-top: 30px;
-    /* padding: 20px; */
     font-size: 1.75rem;
 }
 
 .underline {
     background-color: rgb(22, 16, 146);
-    height:5px;
+    height: 5px;
     width: 30px;
 }
-.jobCard{
+
+.jobCard {
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 10px;
@@ -19,7 +19,7 @@
     width: 100%;
 }
 
-.apply{
+.apply {
     border: 1px solid rgb(1, 68, 183);
     float: right;
     text-decoration: none;
@@ -46,19 +46,21 @@
     top: -20px;
 }
 
-.jobHeading{
+.jobHeading {
     font-weight: bold;
     text-decoration: none;
 }
 
 @media only screen and (max-width: 550px) {
-    .container{
+    .container {
         width: 80%;
     }
-    .jobHeading{
+
+    .jobHeading {
         font-size: 20px;
     }
-    .jobLocation{
+
+    .jobLocation {
         font-size: 15px;
     }
-  }
+}
