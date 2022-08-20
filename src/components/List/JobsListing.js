@@ -11,14 +11,14 @@ function JobsListing(props) {
     useEffect(() => {
         fetch(URL).then((data) => data.json()).then((response) => setjobData(response));
     }, [URL])
-
+    console.log(URL);
     return (
         <div>
             <div className={style.container}>
                 <h3>Department</h3>
 
                 {jobData.map((Element) => {
-                    console.log(Element.id);
+                    {/* console.log(Element); */}
                     return <div>
                         <div className={style.underline}></div>
                         <div className={style.jobCard}>
@@ -26,7 +26,7 @@ function JobsListing(props) {
                             <LocationCityIcon></LocationCityIcon><span>{Element.location.city}</span>
                             <span>{Element.type}</span>
                             <a className={style.link} href={Element.applyUrl} >Apply</a>
-                            <Link className={style.link} to="/display" state={{ jobId: Element.id }}>View</Link>
+                            <Link className={style.link} to="/display" state={{ jobId: Element.id, department: Element.department || 0 }}>View</Link>
                         </div>
                     </div>
                 })}
