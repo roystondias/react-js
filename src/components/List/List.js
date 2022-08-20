@@ -33,24 +33,24 @@ function List() {
     return (
         <div>
             <div className={style.container}>
-                <input placeholder='Search'></input><br></br><br></br>
-                <label htmlFor="department"><strong>Department:</strong></label>
+                <input placeholder='Search For a Job'></input><br></br><br></br>
                 <select onChange={onOptionDepartmentHandler} id="department">
+                    <option value="">Department</option>
                     {department.map((Element) => {
                         return <option value={Element.id}>{Element.title}</option>
                     })}
                 </select>
                 
-                <label htmlFor="location"><strong>Location:</strong></label>
                 <select onChange={onOptionLocationChangeHandler} id="location">
+                <option value="">Location</option>
                     {location.map((Element) => {
                         return <option value={Element.id}>{Element.city}</option>
                     })}
                 </select>
 
 
-                <label htmlFor="functions"><strong>Functions:</strong></label>
                 <select onChange={onOptionFunctionHandler} id="functions">
+                <option value="">Function</option>
                     {functions.map((Element) => {
                         return <option value={Element.id}>{Element.title}</option>
                     })}
@@ -58,19 +58,20 @@ function List() {
 
             </div>
             <div className={style.container__filter}>
+                    <h3>Add Filter</h3>
                     {department.map((Element) => {
                         if (Element.id == selectedDepartment) {
-                            return <div style={{border: "solid 1px black", display:"inline", margin:"20px", padding:"5px"}}>{Element.title}</div>
+                            return <div className={style.filter}>{Element.title}</div>
                         }
                     })}
                     {location.map((Element) => {
                         if (Element.id == selectedLocation) {
-                            return <div style={{border: "solid 1px black", display:"inline", margin:"20px", padding:"5px"}}>{Element.city}</div>
+                            return <div className={style.filter}>{Element.city}</div>
                         }
                     })}
                     {functions.map((Element) => {
                         if (Element.id == selectedFunction) {
-                            return <div style={{border: "solid 1px black", display:"inline", margin:"20px", padding:"5px"}}>{Element.title}</div>
+                            return <div className={style.filter}>{Element.title}</div>
                         }
                     })}
                 </div>
