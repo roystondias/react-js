@@ -1,0 +1,11 @@
+.flexbox{
+    display: flex;
+    border: 1px solid black;
+}
+
+.flexItem1{
+    margin: 10px;
+}
+.flexItem2{
+    margin: 10px;
+}

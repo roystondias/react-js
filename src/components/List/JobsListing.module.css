@@ -17,7 +17,7 @@
     padding: 10px;
 }
 
-a{
+.link{
     border: 1px solid black;
     float: right;
     margin: 5px;
@@ -29,4 +29,5 @@ a{
 
 .jobHeading{
     font-weight: bold;
+    text-decoration: none;
 }
