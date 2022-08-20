@@ -12,6 +12,7 @@ function JobsListing(props) {
         fetch(URL).then((data) => data.json()).then((response) => setjobData(response));
     }, [URL])
     console.log(jobData);
+    console.log(URL);
     return (
         <div>
             <div className={style.container}>
@@ -23,8 +24,7 @@ function JobsListing(props) {
                         <div className={style.underline}></div>
                         <div className={style.jobCard}>
                                 <span className={style.jobHeading} >{Element.title} </span><br></br>
-                            <LocationCityIcon></LocationCityIcon><span>{Element.location.city}</span>
-                            <span>{Element.type}</span>
+                            <LocationCityIcon></LocationCityIcon><span className={style.jobLocation}>{Element.location.city}</span>
                             <Link className={style.view} to="/display" state={{ jobId: Element.id, department: Element.department || 0 }}>View</Link>
                             <a className={style.apply} href={Element.applyUrl} >Apply</a>
                         </div>

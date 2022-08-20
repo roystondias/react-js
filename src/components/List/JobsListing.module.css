@@ -50,3 +50,15 @@
     font-weight: bold;
     text-decoration: none;
 }
+
+@media only screen and (max-width: 550px) {
+    .container{
+        width: 80%;
+    }
+    .jobHeading{
+        font-size: 20px;
+    }
+    .jobLocation{
+        font-size: 15px;
+    }
+  }
